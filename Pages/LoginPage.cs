@@ -1,16 +1,18 @@
 ﻿using System;
 using OpenQA.Selenium;
+using SeleniumAutomation.CommonMethods;
 using SeleniumExtras.PageObjects;
 
 namespace SeleniumAutomation.Pages
 {
 	public class LoginPage
 	{
-		//IWebDriver driver;
+        public SeActions actions;
+
 		public LoginPage(IWebDriver driver)
 		{
             PageFactory.InitElements(driver, this);
-            //this.driver = driver;
+            actions = new SeActions();
         }
 
 		[FindsBy(How = How.Name, Using = "username")]
@@ -25,9 +27,9 @@ namespace SeleniumAutomation.Pages
 
         public void login(string UserName, string Password)
         {
-            UserNameInputBox.SendKeys(UserName);
-            PasswordInputBox.SendKeys(Password);
-            LoginButton.Click();
+            actions.TypeValue(UserNameInputBox, UserName);
+            actions.TypeValue(PasswordInputBox, Password);
+            actions.ClickOnElement(LoginButton);
         }
     }
 }

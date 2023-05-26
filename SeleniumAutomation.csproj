@@ -27,10 +27,12 @@
     <None Remove="BaseTest\" />
     <None Remove="Pages\" />
     <None Remove="Tests\" />
+    <None Remove="CommonMethods\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaseTest\" />
     <Folder Include="Pages\" />
     <Folder Include="Tests\" />
+    <Folder Include="CommonMethods\" />
   </ItemGroup>
 </Project>

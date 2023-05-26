@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace SeleniumAutomation.BaseTest
 {
-	[TestClass]
+	
 	public class BaseAutomation
 	{
         public IWebDriver driver;
